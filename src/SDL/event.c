@@ -30,7 +30,11 @@ static	void	display_fps(void);	/* test */
 
 int	use_cmdkey = 1;			/* Commandキーでメニューへ遷移     */
 
-int	keyboard_type = 1;		/* キーボードの種類                */
+#ifdef KEY_101
+int	keyboard_type = 2 ; // 101をデフォルトとする
+#else
+int	keyboard_type = 1;	// 106をデフォルトとする
+#endif
 char	*file_keyboard = NULL;		/* キー設定ファイル名		   */
 
 int	use_joydevice = TRUE;		/* ジョイスティックデバイスを開く? */

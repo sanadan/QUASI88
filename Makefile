@@ -303,7 +303,8 @@ CC	= gcc
 #	あります。PowerPC 系の gcc などがそうですが、この場合、-fsigned-char 
 #	を指定します。
 
-CFLAGS = -O2
+#CFLAGS = -O2
+CFLAGS = -O2 -DKEY_101
 
 # 例えば gcc & PowerPC の場合、以下のコメントアウトを外します。
 # CFLAGS += -fsigned-char
@@ -335,11 +336,12 @@ USEINLINE	= '-DINLINE=static __inline__'
 # X11LIB  	= -L/usr/X11R6/lib
 
 # X.Org の場合
-#X11INC  	= -I/usr/local/include
-#X11LIB  	= -L/usr/local/lib
+# X11INC  	= -I/usr/local/include
+# X11LIB  	= -L/usr/local/lib
 
-X11INC = -I/opt/X11/include
-X11LIB = -L/opt/X11/lib
+# macOSの場合
+# X11INC = -I/opt/X11/include
+# X11LIB = -L/opt/X11/lib
 
 
 
