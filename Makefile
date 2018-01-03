@@ -16,8 +16,8 @@
 #	GTK版の場合は、「GTK_VERSION」以外の行をコメントアウトしてください。
 #	( GTK版は実験中です。GTK版でサウンドを鳴らすには、SDL が必要です )
 
-X11_VERSION	= 1
-# SDL_VERSION	= 1
+# X11_VERSION	= 1
+SDL_VERSION	= 1
 # GTK_VERSION	= 1
 
 
@@ -188,7 +188,7 @@ USE_SOUND		= 1
 #	動作確認が取れているのは、FreeBSD と Linux のみです
 
 #---------------------- FreeBSD
-ARCH = freebsd
+# ARCH = freebsd
 #---------------------- Linux
 # ARCH = linux
 #---------------------- NetBSD
@@ -202,7 +202,7 @@ ARCH = freebsd
 #---------------------- OpenStep on NeXT systems
 # ARCH = next
 #---------------------- OpenStep on Apple systems (Cocoa)
-# ARCH = macosx
+ARCH = macosx
 #---------------------- IRIX ( with sound using the old AL (version 1) package)
 # ARCH = irix
 #---------------------- IRIX ( with sound using the al (IRIX 6.x) package)
@@ -335,10 +335,11 @@ USEINLINE	= '-DINLINE=static __inline__'
 # X11LIB  	= -L/usr/X11R6/lib
 
 # X.Org の場合
-X11INC  	= -I/usr/local/include
-X11LIB  	= -L/usr/local/lib
+#X11INC  	= -I/usr/local/include
+#X11LIB  	= -L/usr/local/lib
 
-
+X11INC = -I/opt/X11/include
+X11LIB = -L/opt/X11/lib
 
 
 
